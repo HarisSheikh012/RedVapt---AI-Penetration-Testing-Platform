@@ -4,7 +4,7 @@ import { Activity, ShieldAlert, Globe, CheckCircle2, Zap, ArrowRight, Server, Da
 
 const PythonCodeLine = ({ text, delay }: { text: string; delay: number }) => (
   <div className="flex gap-3 text-xs md:text-sm" style={{ animation: `fadeIn 0.5s ease-out ${delay}s both` }}>
-    <span className="text-slate-600 select-none">>>></span>
+    <span className="text-slate-600 select-none">{">>>"}</span>
     <span className="text-indigo-400 font-mono">{text}</span>
   </div>
 );
@@ -69,7 +69,7 @@ const Dashboard: React.FC = () => {
       {/* Dynamic Hero Section */}
       <section className="relative min-h-[500px] flex flex-col lg:flex-row items-center justify-between gap-12 rounded-[3rem] bg-slate-950/50 border border-slate-800 p-12 backdrop-blur-xl overflow-hidden group">
         <div className="absolute top-0 right-0 w-[50%] h-full bg-indigo-600/5 blur-[120px] rounded-full -mr-32"></div>
-        
+
         <div className="relative z-10 flex-1 space-y-10">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-black uppercase tracking-widest shadow-lg shadow-cyan-500/10">
             <span className="relative flex h-2 w-2">
@@ -78,18 +78,18 @@ const Dashboard: React.FC = () => {
             </span>
             Python Multi-Agent Framework v2.4
           </div>
-          
+
           <h1 className="text-6xl lg:text-8xl font-black leading-none tracking-tighter text-white">
             Autonomous <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-indigo-400 to-cyan-400 animate-gradient">
               Cyber Warfare
             </span>
           </h1>
-          
+
           <p className="text-slate-400 text-xl max-w-xl leading-relaxed font-medium">
             RedVapt orchestrates specialized Python workers to map, probe, and validate your attack surface using collaborative intelligence.
           </p>
-          
+
           <div className="flex flex-wrap gap-4 pt-4">
             <button className="px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl font-black shadow-2xl shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-3">
               <Zap size={22} /> START MISSION
@@ -102,32 +102,32 @@ const Dashboard: React.FC = () => {
 
         <div className="relative flex-1 hidden lg:block w-full">
           <div className="bg-slate-900/80 backdrop-blur-2xl border border-slate-800 rounded-[2.5rem] p-8 shadow-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-1000">
-             <div className="flex items-center justify-between mb-8">
-               <div className="flex items-center gap-3">
-                 <div className="p-2 bg-pink-500/20 rounded-lg"><Terminal size={18} className="text-pink-400" /></div>
-                 <h3 className="text-sm font-black uppercase tracking-widest text-slate-300">Live Agent Feed</h3>
-               </div>
-               <div className="flex gap-2">
-                 <div className="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
-                 <div className="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
-                 <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
-               </div>
-             </div>
-             
-             <div className="space-y-4 font-mono">
-               {logs.map((log, i) => (
-                 <div key={i} className={`text-[11px] p-3 rounded-xl border border-white/5 bg-white/[0.02] flex items-center gap-3 ${i === 0 ? 'text-cyan-400 translate-x-1' : 'text-slate-500'} transition-all`}>
-                   <span className="opacity-30">[{new Date().toLocaleTimeString().split(' ')[0]}]</span>
-                   {log}
-                 </div>
-               ))}
-               <div className="pt-4 flex gap-2 overflow-hidden">
-                 <div className="h-1 flex-1 bg-slate-800 rounded-full overflow-hidden">
-                   <div className="h-full bg-indigo-500 animate-progress-fast"></div>
-                 </div>
-                 <div className="h-1 w-12 bg-pink-500 rounded-full animate-pulse"></div>
-               </div>
-             </div>
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-pink-500/20 rounded-lg"><Terminal size={18} className="text-pink-400" /></div>
+                <h3 className="text-sm font-black uppercase tracking-widest text-slate-300">Live Agent Feed</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+              </div>
+            </div>
+
+            <div className="space-y-4 font-mono">
+              {logs.map((log, i) => (
+                <div key={i} className={`text-[11px] p-3 rounded-xl border border-white/5 bg-white/[0.02] flex items-center gap-3 ${i === 0 ? 'text-cyan-400 translate-x-1' : 'text-slate-500'} transition-all`}>
+                  <span className="opacity-30">[{new Date().toLocaleTimeString().split(' ')[0]}]</span>
+                  {log}
+                </div>
+              ))}
+              <div className="pt-4 flex gap-2 overflow-hidden">
+                <div className="h-1 flex-1 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="h-full bg-indigo-500 animate-progress-fast"></div>
+                </div>
+                <div className="h-1 w-12 bg-pink-500 rounded-full animate-pulse"></div>
+              </div>
+            </div>
           </div>
           <div className="absolute -bottom-10 -right-10 bg-indigo-500/10 p-12 rounded-full blur-[80px]"></div>
         </div>
@@ -155,18 +155,18 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
           <div className="text-right">
-             <p className="text-slate-600 text-[10px] font-black uppercase tracking-widest mb-1">Worker Load</p>
-             <div className="flex gap-1">
-               {[...Array(8)].map((_, i) => (
-                 <div key={i} className={`w-1.5 h-6 rounded-full ${i < 6 ? 'bg-cyan-500/50' : 'bg-slate-800'}`}></div>
-               ))}
-             </div>
+            <p className="text-slate-600 text-[10px] font-black uppercase tracking-widest mb-1">Worker Load</p>
+            <div className="flex gap-1">
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className={`w-1.5 h-6 rounded-full ${i < 6 ? 'bg-cyan-500/50' : 'bg-slate-800'}`}></div>
+              ))}
+            </div>
           </div>
         </div>
-        
+
         <div className="space-y-10">
           <div className="relative w-full h-6 bg-slate-900 rounded-full p-1 shadow-inner overflow-hidden">
-            <div 
+            <div
               className="absolute top-1 left-1 bottom-1 bg-gradient-to-r from-indigo-600 via-cyan-400 to-indigo-500 transition-all duration-300 ease-out rounded-full shadow-[0_0_20px_rgba(34,211,238,0.3)]"
               style={{ width: `calc(${scanProgress}% - 8px)` }}
             >
@@ -174,7 +174,7 @@ const Dashboard: React.FC = () => {
               <div className="absolute inset-y-0 right-0 w-32 bg-white/20 blur-xl animate-pulse"></div>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-xs font-black uppercase tracking-widest">
             {[
               { n: 'DNS Recon', v: 20 },
@@ -184,11 +184,11 @@ const Dashboard: React.FC = () => {
               { n: 'Reporting', v: 95 }
             ].map((stage, i) => (
               <div key={i} className={`flex flex-col gap-3 p-4 rounded-2xl border transition-all ${scanProgress > stage.v ? 'bg-indigo-500/5 border-indigo-500/20 text-indigo-400' : 'bg-slate-900/40 border-slate-800 text-slate-600'}`}>
-                 <span className="flex items-center justify-between">
-                    {stage.n}
-                    {scanProgress > stage.v && <CheckCircle2 size={14} className="animate-bounce" />}
-                 </span>
-                 <div className="h-1 bg-current opacity-20 rounded-full"></div>
+                <span className="flex items-center justify-between">
+                  {stage.n}
+                  {scanProgress > stage.v && <CheckCircle2 size={14} className="animate-bounce" />}
+                </span>
+                <div className="h-1 bg-current opacity-20 rounded-full"></div>
               </div>
             ))}
           </div>
@@ -202,24 +202,24 @@ const Dashboard: React.FC = () => {
           <h2 className="text-5xl lg:text-7xl font-black text-white tracking-tighter">Security for <span className="text-indigo-500">Every Vertical</span></h2>
           <p className="text-slate-500 text-xl max-w-2xl mx-auto font-medium">Specialized payloads and logic agents for industry-specific threat models.</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industryItems.map((item) => (
             <div key={item.id} className="group relative h-[400px] rounded-[2.5rem] overflow-hidden border border-slate-800 hover:border-indigo-500/50 transition-all duration-700">
-               <div className="absolute inset-0 scale-100 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
-                  <img src={item.img} className="w-full h-full object-cover opacity-30 group-hover:opacity-60 transition-opacity" alt={item.title} />
-               </div>
-               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-               <div className="absolute inset-0 p-10 flex flex-col justify-end gap-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className={`w-fit px-3 py-1 rounded ${item.tagBg} ${item.tagText} text-[10px] font-black uppercase tracking-widest`}>
-                    {item.title}
-                  </div>
-                  <h3 className="text-3xl font-black text-white">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700">{item.desc}</p>
-                  <div className="pt-4 flex items-center gap-2 text-indigo-400 font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0">
-                    Learn Protocol <ArrowRight size={14} />
-                  </div>
-               </div>
+              <div className="absolute inset-0 scale-100 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                <img src={item.img} className="w-full h-full object-cover opacity-30 group-hover:opacity-60 transition-opacity" alt={item.title} />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+              <div className="absolute inset-0 p-10 flex flex-col justify-end gap-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                <div className={`w-fit px-3 py-1 rounded ${item.tagBg} ${item.tagText} text-[10px] font-black uppercase tracking-widest`}>
+                  {item.title}
+                </div>
+                <h3 className="text-3xl font-black text-white">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700">{item.desc}</p>
+                <div className="pt-4 flex items-center gap-2 text-indigo-400 font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0">
+                  Learn Protocol <ArrowRight size={14} />
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -235,55 +235,55 @@ const Dashboard: React.FC = () => {
               RedVapt doesn't just scan; it understands. Each Python worker is powered by a specialized subset of security knowledge, coordinated by the Gemini 3 Pro reasoning engine.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 gap-6">
             <div className="p-6 bg-slate-900/40 border border-slate-800 rounded-3xl group hover:bg-slate-900 transition-all">
-               <p className="text-3xl font-black text-white mb-1">15ms</p>
-               <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Global Handshake</p>
+              <p className="text-3xl font-black text-white mb-1">15ms</p>
+              <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Global Handshake</p>
             </div>
             <div className="p-6 bg-slate-900/40 border border-slate-800 rounded-3xl group hover:bg-slate-900 transition-all">
-               <p className="text-3xl font-black text-white mb-1">98.4%</p>
-               <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Agent Accuracy</p>
+              <p className="text-3xl font-black text-white mb-1">98.4%</p>
+              <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Agent Accuracy</p>
             </div>
           </div>
         </div>
 
         <div className="space-y-4">
           <div className="group p-8 bg-slate-950/50 border border-slate-800 rounded-[2rem] flex gap-6 hover:border-indigo-500/50 transition-all hover:translate-x-3 cursor-default">
-             <div className="p-4 rounded-2xl bg-indigo-500/10 text-indigo-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
-                <Cpu size={28} />
-             </div>
-             <div>
-                <h4 className="text-xl font-black text-white mb-2">Dynamic Payload Orchestration</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">Python-based payload generator that mutates based on server response patterns.</p>
-             </div>
+            <div className="p-4 rounded-2xl bg-indigo-500/10 text-indigo-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
+              <Cpu size={28} />
+            </div>
+            <div>
+              <h4 className="text-xl font-black text-white mb-2">Dynamic Payload Orchestration</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">Python-based payload generator that mutates based on server response patterns.</p>
+            </div>
           </div>
           <div className="group p-8 bg-slate-950/50 border border-slate-800 rounded-[2rem] flex gap-6 hover:border-indigo-500/50 transition-all hover:translate-x-3 cursor-default">
-             <div className="p-4 rounded-2xl bg-cyan-500/10 text-cyan-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
-                <Globe size={28} />
-             </div>
-             <div>
-                <h4 className="text-xl font-black text-white mb-2">Distributed Recon Workers</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">Asynchronous asset discovery using Python asyncio for massive parallelization.</p>
-             </div>
+            <div className="p-4 rounded-2xl bg-cyan-500/10 text-cyan-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
+              <Globe size={28} />
+            </div>
+            <div>
+              <h4 className="text-xl font-black text-white mb-2">Distributed Recon Workers</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">Asynchronous asset discovery using Python asyncio for massive parallelization.</p>
+            </div>
           </div>
           <div className="group p-8 bg-slate-950/50 border border-slate-800 rounded-[2rem] flex gap-6 hover:border-indigo-500/50 transition-all hover:translate-x-3 cursor-default">
-             <div className="p-4 rounded-2xl bg-pink-500/10 text-pink-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
-                <Eye size={28} />
-             </div>
-             <div>
-                <h4 className="text-xl font-black text-white mb-2">Heuristic Logic Analysis</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">Identifying complex business logic flaws that automated tools typically miss.</p>
-             </div>
+            <div className="p-4 rounded-2xl bg-pink-500/10 text-pink-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
+              <Eye size={28} />
+            </div>
+            <div>
+              <h4 className="text-xl font-black text-white mb-2">Heuristic Logic Analysis</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">Identifying complex business logic flaws that automated tools typically miss.</p>
+            </div>
           </div>
           <div className="group p-8 bg-slate-950/50 border border-slate-800 rounded-[2rem] flex gap-6 hover:border-indigo-500/50 transition-all hover:translate-x-3 cursor-default">
-             <div className="p-4 rounded-2xl bg-green-500/10 text-green-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
-                <Lock size={28} />
-             </div>
-             <div>
-                <h4 className="text-xl font-black text-white mb-2">Safe Exploitation Engine</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">Non-destructive vulnerability validation with cryptographic proof collection.</p>
-             </div>
+            <div className="p-4 rounded-2xl bg-green-500/10 text-green-400 shadow-xl group-hover:scale-110 transition-transform h-fit">
+              <Lock size={28} />
+            </div>
+            <div>
+              <h4 className="text-xl font-black text-white mb-2">Safe Exploitation Engine</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">Non-destructive vulnerability validation with cryptographic proof collection.</p>
+            </div>
           </div>
         </div>
       </section>

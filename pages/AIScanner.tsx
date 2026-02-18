@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, ShieldCheck, Terminal, AlertTriangle, Loader2, Sparkles, Target } from 'lucide-react';
-import { GeminiService } from '../services/geminiService';
+import { GroqService } from '../services/groqService';
 import { ChatMessage } from '../types';
 
 const AIScanner: React.FC = () => {
@@ -39,8 +39,8 @@ const AIScanner: React.FC = () => {
     setInput('');
     setIsLoading(true);
 
-    const gemini = GeminiService.getInstance();
-    const response = await gemini.chat(input);
+    const groq = GroqService.getInstance();
+    const response = await groq.chat(input);
 
     const botMessage: ChatMessage = {
       role: 'assistant',
@@ -90,8 +90,8 @@ const AIScanner: React.FC = () => {
         {/* Chat Area */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin scrollbar-thumb-slate-700">
           {messages.map((msg, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`flex gap-4 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.role === 'assistant' && (
@@ -99,11 +99,10 @@ const AIScanner: React.FC = () => {
                   <Bot size={20} className="text-white" />
                 </div>
               )}
-              <div className={`max-w-[80%] rounded-2xl p-4 shadow-xl ${
-                msg.role === 'user' 
-                  ? 'bg-blue-600 text-white rounded-tr-none' 
+              <div className={`max-w-[80%] rounded-2xl p-4 shadow-xl ${msg.role === 'user'
+                  ? 'bg-blue-600 text-white rounded-tr-none'
                   : 'bg-slate-800/80 text-slate-200 border border-slate-700 rounded-tl-none'
-              }`}>
+                }`}>
                 <div className="text-sm whitespace-pre-wrap leading-relaxed prose prose-invert">
                   {msg.content}
                 </div>
@@ -141,14 +140,14 @@ const AIScanner: React.FC = () => {
             <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-cyan-400 transition-colors">
               <Target size={20} />
             </div>
-            <input 
+            <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Enter target domain or URL to scan (e.g., example.com)..."
               className="w-full bg-slate-900 border border-slate-800 rounded-2xl py-4 pl-12 pr-16 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all text-slate-200 placeholder:text-slate-600"
             />
-            <button 
+            <button
               type="submit"
               disabled={isLoading || !input.trim()}
               className="absolute right-2 top-1/2 -translate-y-1/2 p-3 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-800 disabled:text-slate-600 text-white rounded-xl shadow-lg shadow-indigo-500/20 transition-all active:scale-95"
@@ -158,7 +157,7 @@ const AIScanner: React.FC = () => {
           </form>
           <div className="flex gap-4 mt-4 overflow-x-auto pb-2 scrollbar-none">
             {['Scan airuniversity.edu.pk', 'Analyze subdomains for test.com', 'Check OWASP top 10'].map(query => (
-              <button 
+              <button
                 key={query}
                 onClick={() => setInput(query)}
                 className="whitespace-nowrap px-4 py-1.5 bg-slate-900/60 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white rounded-full text-xs transition-colors"

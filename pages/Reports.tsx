@@ -17,15 +17,15 @@ const ReportCard = ({ title, type, date, issues, score }: any) => (
         </div>
       </div>
     </div>
-    
+
     <div className="flex items-center gap-8 w-full sm:w-auto">
       <div className="hidden lg:block text-right">
         <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">Security Score</p>
         <div className="flex items-center gap-2">
-           <div className="w-16 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-             <div className="h-full bg-green-500" style={{ width: `${score}%` }}></div>
-           </div>
-           <span className="text-sm font-bold text-green-500">{score}%</span>
+          <div className="w-16 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+            <div className="h-full bg-green-500" style={{ width: `${score}%` }}></div>
+          </div>
+          <span className="text-sm font-bold text-green-500">{score}%</span>
         </div>
       </div>
       <div className="flex items-center gap-2 ml-auto">
@@ -81,16 +81,16 @@ const Reports: React.FC = () => {
       </div>
 
       <div className="mt-12 bg-slate-900/40 border border-slate-800 rounded-3xl p-8 flex items-center justify-between">
-         <div className="flex items-center gap-4">
-           <Share2 className="text-indigo-400" />
-           <div>
-             <h4 className="font-bold">Automated Report Delivery</h4>
-             <p className="text-sm text-slate-500">Setup recurring emails to your security team.</p>
-           </div>
-         </div>
-         <button className="text-cyan-400 text-sm font-bold flex items-center gap-1 hover:underline">
-           Configure Settings <ArrowUpRight size={14} />
-         </button>
+        <div className="flex items-center gap-4">
+          <Share2 className="text-indigo-400" />
+          <div>
+            <h4 className="font-bold">Automated Report Delivery</h4>
+            <p className="text-sm text-slate-500">Setup recurring emails to your security team.</p>
+          </div>
+        </div>
+        <button className="text-cyan-400 text-sm font-bold flex items-center gap-1 hover:underline">
+          Configure Settings <ArrowUpRight size={14} />
+        </button>
       </div>
     </div>
   );
