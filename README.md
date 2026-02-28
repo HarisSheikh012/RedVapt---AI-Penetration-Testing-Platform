@@ -1,13 +1,13 @@
 # RedVapt - AI Penetration Testing Platform
 
-**Author:** Haris Babar
+**Author/Owner:** Haris Babar
 
-RedVapt is an autonomous multi-agent penetration testing framework designed to automate reconnaissance, scanning, and security analysis using collaborative AI agents. It provides a sophisticated interface for managing security audits and visualizing vulnerabilities.
+RedVapt is an autonomous multi-agent penetration testing framework designed to automate reconnaissance, scanning, and security analysis using collaborative proprietary AI agents. It provides a sophisticated interface for managing security audits and visualizing vulnerabilities.
 
 ## Core Features
 
 - **Autonomous Reconnaissance:** Automated target discovery and mapping.
-- **AI-Powered Analysis:** Intelligent scanning using Gemini models to identify and explain vulnerabilities.
+- **Proprietary AI Analysis:** Intelligent scanning using advanced security-tuned models to identify and explain vulnerabilities.
 - **Dynamic Dashboard:** Real-time visualization of security findings and risk posture.
 - **Multi-Agent Collaboration:** Specialised agents working together for comprehensive testing.
 
@@ -34,7 +34,7 @@ RedVapt is an autonomous multi-agent penetration testing framework designed to a
 3. Configure Environment:
    Create a `.env.local` file in the root directory and add your API key:
    ```env
-   API_KEY=your_gemini_api_key_here
+   API_KEY=your_secure_api_key_here
    ```
 
 ### Running the Project
@@ -51,12 +51,12 @@ The application will be available at `http://localhost:5173`.
 RedVapt is built with modern web technologies:
 - **Frontend:** React + TypeScript + Vite
 - **Styling:** Tailwind CSS
-- **AI Logic:** Integrated via `@google/genai` (Gemini Models)
-- **Visuals:** Lucide React & Recharts
+- **AI Logic:** Integrated via proprietary security-focused AI engine.
+- **Visuals:** Advanced visualization components using React.
 
-## License
+## Ownership
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is the sole property of **Haris Babar**. All rights reserved. No part of this platform may be copied or redistributed without explicit permission.
 
 ---
 © 2026 Haris Babar. All rights reserved.

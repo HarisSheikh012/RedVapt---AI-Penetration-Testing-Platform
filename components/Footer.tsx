@@ -57,13 +57,13 @@ const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto pt-10 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] text-center md:text-left">
-          <p>© 2025 RedVapt Ecosystem. Final Year Technical Project.</p>
+          <p>© 2026 Haris Babar. All rights reserved.</p>
         </div>
-        
+
         <div className="flex items-center gap-2">
           <p className="flex items-center gap-2 text-sm text-slate-400 font-bold">
-            Made with <Heart size={16} className="text-red-500 fill-red-500 animate-pulse" /> by 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-500 font-black text-lg">Haris Sheikh</span>
+            Made with <Heart size={16} className="text-red-500 fill-red-500 animate-pulse" /> by
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-500 font-black text-lg">Haris Babar</span>
           </p>
         </div>
       </div>

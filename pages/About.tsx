@@ -21,44 +21,44 @@ const About: React.FC = () => {
             </h1>
           </div>
           <p className="text-slate-400 text-xl leading-relaxed font-medium">
-            RedVapt was built to bridge the gap between static vulnerability scanners and manual penetration testing. Conceived by <strong>Haris Sheikh</strong>, the platform leverages Python-based modularity to simulate complex adversarial behavior.
+            RedVapt was built to bridge the gap between static vulnerability scanners and manual penetration testing. Conceived by <strong>Haris Babar</strong>, the platform leverages advanced modularity to simulate complex adversarial behavior.
           </p>
           <div className="flex flex-wrap gap-3">
-            <TechPill text="Python 3.12" />
-            <TechPill text="Gemini 3 Pro" />
+            <TechPill text="Proprietary Logic" />
+            <TechPill text="Security AI Engine" />
             <TechPill text="AsyncIO" />
-            <TechPill text="PyTorch Core" />
+            <TechPill text="Neural Core" />
             <TechPill text="Dockerized Agents" />
           </div>
         </div>
         <div className="flex-1 relative group">
-           <div className="absolute inset-0 bg-indigo-600/20 blur-[100px] rounded-full group-hover:bg-indigo-600/30 transition-colors"></div>
-           <div className="relative bg-slate-950 border border-slate-800 p-10 rounded-[3rem] shadow-2xl transform hover:rotate-2 transition-transform duration-700">
-              <div className="space-y-6">
-                <div className="flex gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-                </div>
-                <div className="font-mono text-xs md:text-sm text-slate-400 space-y-3">
-                  <p className="text-indigo-400">class AutonomousAgent(Worker):</p>
-                  <p className="pl-4">def __init__(self, brain=Gemini):</p>
-                  <p className="pl-8">self.orchestrator = brain</p>
-                  <p className="pl-8 text-slate-600"># Specialized Python logic</p>
-                  <p className="pl-8">self.modules = ['recon', 'fuzz', 'poc']</p>
-                  <p className="pl-4">async def execute(self, target):</p>
-                  <p className="pl-8">report = await self.probe(target)</p>
-                  <p className="pl-8">return self.brain.reason(report)</p>
-                </div>
+          <div className="absolute inset-0 bg-indigo-600/20 blur-[100px] rounded-full group-hover:bg-indigo-600/30 transition-colors"></div>
+          <div className="relative bg-slate-950 border border-slate-800 p-10 rounded-[3rem] shadow-2xl transform hover:rotate-2 transition-transform duration-700">
+            <div className="space-y-6">
+              <div className="flex gap-2 mb-4">
+                <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
               </div>
-           </div>
+              <div className="font-mono text-xs md:text-sm text-slate-400 space-y-3">
+                <p className="text-indigo-400">class AutonomousAgent(Worker):</p>
+                <p className="pl-4">def __init__(self, brain=ProprietaryAI):</p>
+                <p className="pl-8">self.orchestrator = brain</p>
+                <p className="pl-8 text-slate-600"># Optimized Security Logic</p>
+                <p className="pl-8">self.modules = ['recon', 'fuzz', 'poc']</p>
+                <p className="pl-4">async def execute(self, target):</p>
+                <p className="pl-8">report = await self.probe(target)</p>
+                <p className="pl-8">return self.brain.reason(report)</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="grid md:grid-cols-3 gap-10">
         {[
-          { icon: Target, title: "Precision OSINT", color: "blue", desc: "Our agents use Python's Scapy and Request libraries to map attack surfaces with sub-millisecond precision." },
-          { icon: Zap, title: "Neural Orchestration", color: "pink", desc: "Collaborative reasoning via Gemini 3 Pro allows agents to share context and chain vulnerabilities intelligently." },
+          { icon: Target, title: "Precision OSINT", color: "blue", desc: "Our agents use advanced networking modules to map attack surfaces with sub-millisecond precision." },
+          { icon: Zap, title: "Neural Orchestration", color: "pink", desc: "Collaborative reasoning via proprietary AI allows agents to share context and chain vulnerabilities intelligently." },
           { icon: Shield, title: "Ethical Integrity", color: "green", desc: "Built with a 'Safe-First' philosophy, RedVapt ensures all probes are non-destructive and data-privacy focused." }
         ].map((item, idx) => (
           <div key={idx} className="bg-slate-900/30 border border-slate-800 p-12 rounded-[2.5rem] hover:border-slate-600 transition-all hover:-translate-y-2 group">
@@ -80,9 +80,9 @@ const About: React.FC = () => {
             <h2 className="text-5xl font-black text-white tracking-tighter">The Agent Ecosystem</h2>
             <div className="space-y-6">
               {[
-                { icon: Globe, name: "Recon Worker", tech: "BeautifulSoup / DNS-Python", desc: "Maps DNS, cloud infrastructure, and hidden endpoints." },
-                { icon: Search, name: "Vuln Scanner", tech: "Nuclei Core / Custom Fuzzers", desc: "Identifies CVEs and logic flaws with minimal noise." },
-                { icon: Server, name: "Logic Evaluator", tech: "PyJWT / Cryptography", desc: "Audits session management and authentication flow." },
+                { icon: Globe, name: "Recon Worker", tech: "Internal Mapping Engine", desc: "Maps DNS, cloud infrastructure, and hidden endpoints." },
+                { icon: Search, name: "Vuln Scanner", tech: "Proprietary Fuzzers", desc: "Identifies CVEs and logic flaws with minimal noise." },
+                { icon: Server, name: "Logic Evaluator", tech: "Security Core", desc: "Audits session management and authentication flow." },
               ].map((agent, i) => (
                 <div key={i} className="flex gap-6 p-6 bg-slate-900/40 rounded-3xl border border-transparent hover:border-indigo-500/30 transition-all">
                   <div className="p-3 bg-slate-950 rounded-xl text-indigo-400 h-fit">
@@ -98,33 +98,33 @@ const About: React.FC = () => {
             </div>
           </div>
           <div className="space-y-6">
-             <div className="p-8 bg-slate-900/60 rounded-[2rem] border border-slate-800 space-y-4">
-                <div className="flex items-center gap-2 mb-2">
-                   <Layers className="text-pink-500" size={20} />
-                   <h5 className="font-black text-xs uppercase tracking-widest text-slate-300">Stack Architecture</h5>
+            <div className="p-8 bg-slate-900/60 rounded-[2rem] border border-slate-800 space-y-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Layers className="text-pink-500" size={20} />
+                <h5 className="font-black text-xs uppercase tracking-widest text-slate-300">Stack Architecture</h5>
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500">API Core</span>
+                  <span className="font-mono text-indigo-400">Proprietary Backend</span>
                 </div>
-                <div className="flex flex-col gap-3">
-                   <div className="flex items-center justify-between text-xs">
-                     <span className="text-slate-500">API Core</span>
-                     <span className="font-mono text-indigo-400">FastAPI / Python</span>
-                   </div>
-                   <div className="flex items-center justify-between text-xs">
-                     <span className="text-slate-500">Agent Brain</span>
-                     <span className="font-mono text-pink-400">Gemini 3 Pro API</span>
-                   </div>
-                   <div className="flex items-center justify-between text-xs">
-                     <span className="text-slate-500">Database</span>
-                     <span className="font-mono text-cyan-400">PostgreSQL + VectorStore</span>
-                   </div>
-                   <div className="flex items-center justify-between text-xs">
-                     <span className="text-slate-500">UI / Dashboard</span>
-                     <span className="font-mono text-green-400">React + Tailwind</span>
-                   </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500">Agent Brain</span>
+                  <span className="font-mono text-pink-400">Security AI Engine</span>
                 </div>
-             </div>
-             <p className="text-slate-500 text-sm italic text-center px-10 leading-relaxed font-medium">
-               "RedVapt is not just a tool; it's a collaborative teammate for security professionals."
-             </p>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500">Database</span>
+                  <span className="font-mono text-cyan-400">Secure Data Store</span>
+                </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500">UI / Dashboard</span>
+                  <span className="font-mono text-green-400">React + Modern UI</span>
+                </div>
+              </div>
+            </div>
+            <p className="text-slate-500 text-sm italic text-center px-10 leading-relaxed font-medium">
+              "RedVapt is not just a tool; it's a collaborative teammate for security professionals."
+            </p>
           </div>
         </div>
       </section>

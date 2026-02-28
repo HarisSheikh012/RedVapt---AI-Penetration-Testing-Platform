@@ -26,7 +26,7 @@ export class GroqService {
         messages: [
           {
             role: "system",
-            content: "You are a RedVapt AI Penetration Testing Agent. Analyze the provided findings and provide a concise security summary and prioritised next steps for exploitation testing. Keep your answers technical, ethical, and structured for professional penetration testers."
+            content: "You are an AI Penetration Testing Agent. Analyze the provided findings and provide a concise security summary and prioritised next steps for exploitation testing. Keep your answers technical, ethical, and structured for professional penetration testers."
           },
           {
             role: "user",
@@ -49,7 +49,7 @@ export class GroqService {
         messages: [
           {
             role: "system",
-            content: "You are the RedVapt AI assistant. You help users navigate the platform, explain vulnerability findings, and provide remediation advice based on industry standards like OWASP. Use a professional, secure-coding oriented tone."
+            content: "You are a security AI assistant. You help users navigate the platform, explain vulnerability findings, and provide remediation advice based on industry standards like OWASP. Use a professional, secure-coding oriented tone."
           },
           {
             role: "user",
